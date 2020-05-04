@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/logo/orval-logo-horizontal.png?raw=true" width="500" height="160" alt="Orval - Restfull Client Generator" />
+  <img src="https://raw.githubusercontent.com/anymaniax/orval-vscode/master/logo/orval-logo-horizontal.png" width="500" height="160" alt="Orval - Restfull Client Generator" />
 </p>
 
 ### Code Generation
