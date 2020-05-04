@@ -12,6 +12,10 @@
   "categories": [
     "Other"
   ],
+  "activationEvents": [
+    "onCommand:extension.generateAll",
+    "onCommand:extension.generate"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -28,8 +32,14 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "lint": "tslint -p ./",
+    "lint": "eslint src/**/*.ts",
     "watch": "tsc -watch -p ./"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",

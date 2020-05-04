@@ -19,13 +19,13 @@ export function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      window.showQuickPick(paths, {
-        placeHolder: 'select a project',
-        onDidSelectItem: (item: string) =>
-          orval(
-            join(vscode.workspace.rootPath || '', item, './orval.config.js'),
-          ),
+      const item = await window.showQuickPick(paths, {
+        placeHolder: 'select a orval config',
       });
+
+      if (item) {
+        orval(join(vscode.workspace.rootPath || '', item, './orval.config.js'));
+      }
     },
   );
 
