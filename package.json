@@ -1,0 +1,54 @@
+{
+  "name": "orval-vscode",
+  "displayName": "orval",
+  "description": "orval vscode",
+  "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "orval",
+  "repository": "https://github.com/anymaniax/orval-vscode",
+  "engines": {
+    "vscode": "^1.44.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.generateAll",
+        "title": "Orval: Generate all"
+      },
+      {
+        "command": "extension.generate",
+        "title": "Orval: Generate"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "tslint -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@release-it/conventional-changelog": "^1.1.4",
+    "@types/node": "^13.13.4",
+    "@types/vscode": "^1.44.0",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "release-it": "^13.5.8",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "orval": "^2.2.2"
+  }
+}
