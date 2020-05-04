@@ -1,7 +1,7 @@
 {
   "name": "orval-vscode",
   "displayName": "orval",
-  "description": "orval vscode",
+  "description": "orval is able to generate axios client with appropriate type-signatures (TypeScript) from any valid OpenAPI v3 or Swagger v2 specification, either in yaml or json formats.",
   "version": "0.1.0",
   "license": "MIT",
   "publisher": "orval",
@@ -36,12 +36,14 @@
     "watch": "tsc -watch -p ./",
     "release": "dotenv release-it"
   },
+  "icon": "icon.png",
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "homepage": "https://marketplace.visualstudio.com/items?itemName=orval.orval-vscode",
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
@@ -62,5 +64,18 @@
   },
   "dependencies": {
     "orval": "^2.2.2"
-  }
+  },
+  "keywords": [
+    "multi-root ready",
+    "javascript",
+    "tsx",
+    "typescript",
+    "ts",
+    "html",
+    "vue",
+    "angular",
+    "react",
+    "yaml",
+    "yml"
+  ]
 }

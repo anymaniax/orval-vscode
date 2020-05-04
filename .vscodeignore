@@ -1,0 +1,13 @@
+.vscode/**
+src/**
+**/*.map
+.gitignore
+tsconfig.json
+eslintrc.json
+.prettierrc.json
+.release-it.json
+commitling.config.js
+yarn.lock
+.vscodeignore
+.env
+logo/**
