@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/anymaniax/orval-vscode/compare/0.1.0...0.2.0) (2020-05-04)
+
+
+### Features
+
+* **package:** description - ignore files - subscriptions - keywords ([47f1294](https://github.com/anymaniax/orval-vscode/commit/47f129489992981167515e5457ef59bea0dd8b99))
+
 # 0.1.0 (2020-05-04)
 
 
