@@ -15,5 +15,5 @@ Install through VS Code extensions. Search for `orval`
 Can also be installed in VS Code: Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
 
 ```
-ext install orval
+ext install orval.orval-vscode
 ```
