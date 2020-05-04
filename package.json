@@ -33,7 +33,8 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "lint": "eslint src/**/*.ts",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "release": "dotenv release-it"
   },
   "husky": {
     "hooks": {
