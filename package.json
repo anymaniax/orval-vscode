@@ -63,7 +63,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "orval": "^3.1.9"
+    "orval": "^5.5.6"
   },
   "keywords": [
     "multi-root ready",
