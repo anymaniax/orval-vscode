@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/anymaniax/orval-vscode/compare/0.2.1...0.3.0) (2021-08-30)
+
+
+### Features
+
+* **dependencies:** update orval ([faa5a78](https://github.com/anymaniax/orval-vscode/commit/faa5a78ce544e67fc80416ae4d50221e98636c93))
+
 ## [0.2.1](https://github.com/anymaniax/orval-vscode/compare/0.2.0...0.2.1) (2020-11-13)
 
 
