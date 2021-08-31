@@ -7,33 +7,33 @@
   "publisher": "orval",
   "repository": "https://github.com/anymaniax/orval-vscode",
   "engines": {
-    "vscode": "^1.44.0"
+    "vscode": "^1.34.0"
   },
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.generateAll",
-    "onCommand:extension.generate"
+    "onCommand:extension.generate",
+    "onCommand:extension.generateAll"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.generateAll",
-        "title": "Orval: Generate all"
-      },
-      {
         "command": "extension.generate",
         "title": "Orval: Generate"
+      },
+      {
+        "command": "extension.generateAll",
+        "title": "Orval: Generate all"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
+    "vscode:prepublish": "npm run build",
+    "build": "tsup-node ./src/extension.ts --minify --clean --external=vscode --format=cjs",
+    "dev": "tsup-node  ./src/extension.ts --clean --watch src --external=vscode --format=cjs",
     "lint": "eslint src/**/*.ts",
-    "watch": "tsc -watch -p ./",
     "release": "dotenv release-it"
   },
   "icon": "icon.png",
@@ -48,12 +48,12 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@release-it/conventional-changelog": "^1.1.4",
-    "@types/node": "^13.13.4",
-    "@types/vscode": "^1.44.0",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "@typescript-eslint/parser": "^2.30.0",
+    "@types/node": "^12.12.0",
+    "@types/vscode": "^1.34.0",
+    "@typescript-eslint/eslint-plugin": "^4.16.0",
+    "@typescript-eslint/parser": "^4.16.0",
     "dotenv-cli": "^3.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.21.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "husky": "^4.2.5",
@@ -61,7 +61,8 @@
     "openapi-types": "^9.2.0",
     "prettier": "^2.0.5",
     "release-it": "^13.5.8",
-    "typescript": "^4.4.2"
+    "tsup": "^4.14.0",
+    "typescript": "^4.2.2"
   },
   "dependencies": {
     "orval": "^5.5.7"
