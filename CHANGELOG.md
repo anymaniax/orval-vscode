@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/anymaniax/orval-vscode/compare/0.3.0...0.3.1) (2021-08-31)
+
+
+### Bug Fixes
+
+* **package:** build and new design ([2cb52b8](https://github.com/anymaniax/orval-vscode/commit/2cb52b8987bc552fd847534a0e0930ca95e17495))
+
 # [0.3.0](https://github.com/anymaniax/orval-vscode/compare/0.2.1...0.3.0) (2021-08-31)
 
 
