@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
   const generate = vscode.commands.registerCommand(
-    'orval.generate',
+    'extension.generate',
     async () => {
       vscode.workspace.workspaceFolders?.forEach(async (folder) => {
         const files = await vscode.workspace.findFiles(
@@ -40,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   const generateAll = vscode.commands.registerCommand(
-    'orval.generateAll',
+    'extension.generateAll',
     () => {
       const files = vscode.workspace.findFiles('**/{orval.config}.{js,mjs,ts}');
 

@@ -13,18 +13,18 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:orval.generate",
-    "onCommand:orval.generateAll"
+    "onCommand:extension.generate",
+    "onCommand:extension.generateAll"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "orval.generate",
+        "command": "extension.generate",
         "title": "Orval: Generate"
       },
       {
-        "command": "orval.generateAll",
+        "command": "extension.generateAll",
         "title": "Orval: Generate all"
       }
     ]
