@@ -2,7 +2,7 @@
   "name": "orval-vscode",
   "displayName": "orval",
   "description": "orval is able to generate axios client with appropriate type-signatures (TypeScript) from any valid OpenAPI v3 or Swagger v2 specification, either in yaml or json formats.",
-  "version": "0.3.1",
+  "version": "6.0.1",
   "license": "MIT",
   "publisher": "orval",
   "repository": "https://github.com/anymaniax/orval-vscode",

@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/anymaniax/orval-vscode/compare/0.3.1...6.0.1) (2021-09-15)
+
+
+### Features
+
+* **orval:** update ([61c0f55](https://github.com/anymaniax/orval-vscode/commit/61c0f553e0fcaebe9fe155730acbbfe15dfe218a))
+
 ## [0.3.1](https://github.com/anymaniax/orval-vscode/compare/0.3.0...0.3.1) (2021-08-31)
 
 
