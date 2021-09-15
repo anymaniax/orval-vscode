@@ -4,34 +4,45 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
   const generate = vscode.commands.registerCommand(
-    'extension.generate',
+    'orval.generate',
     async () => {
       vscode.workspace.workspaceFolders?.forEach(async (folder) => {
-        const files = await vscode.workspace.findFiles('**/{orval.config.js}');
-        const paths = files.map(({ path }) =>
-          dirname(relative(folder.uri.path || '', path)),
+        const files = await vscode.workspace.findFiles(
+          '**/{orval.config}.{js,mjs,ts}',
         );
+        const paths = files.map((file) => {
+          const path = relative(folder.uri.path || '', file.path);
+          return {
+            path: path,
+            dir: dirname(path),
+          };
+        });
 
         if (paths.length === 1) {
-          orval(join(folder.uri.path || '', paths[0], './orval.config.js'));
+          orval(join(folder.uri.path || '', paths[0].path));
           return;
         }
 
-        const item = await vscode.window.showQuickPick(paths, {
-          placeHolder: 'select a orval config',
-        });
+        const item = await vscode.window.showQuickPick(
+          paths.map(({ dir }) => dir),
+          {
+            placeHolder: 'select a orval config',
+          },
+        );
 
-        if (item) {
-          orval(join(folder.uri.path || '', item, './orval.config.js'));
+        const selectedPath = paths.find((path) => path.dir === item)?.path;
+
+        if (selectedPath) {
+          orval(join(folder.uri.path || '', selectedPath));
         }
       });
     },
   );
 
   const generateAll = vscode.commands.registerCommand(
-    'extension.generateAll',
+    'orval.generateAll',
     () => {
-      const files = vscode.workspace.findFiles('**/{orval.config.js}');
+      const files = vscode.workspace.findFiles('**/{orval.config}.{js,mjs,ts}');
 
       files.then((uris) => {
         uris.forEach((uri) => {

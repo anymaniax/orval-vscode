@@ -13,18 +13,18 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.generate",
-    "onCommand:extension.generateAll"
+    "onCommand:orval.generate",
+    "onCommand:orval.generateAll"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.generate",
+        "command": "orval.generate",
         "title": "Orval: Generate"
       },
       {
-        "command": "extension.generateAll",
+        "command": "orval.generateAll",
         "title": "Orval: Generate all"
       }
     ]
@@ -65,19 +65,28 @@
     "typescript": "^4.2.2"
   },
   "dependencies": {
-    "orval": "^5.5.7"
+    "orval": "^6.0.1"
   },
   "keywords": [
-    "multi-root ready",
-    "javascript",
-    "tsx",
-    "typescript",
-    "ts",
-    "html",
-    "vue",
+    "rest",
+    "client",
+    "swagger",
+    "open-api",
+    "fetch",
+    "data fetching",
+    "code-generation",
     "angular",
     "react",
-    "yaml",
-    "yml"
+    "react-query",
+    "svelte",
+    "svelte-query",
+    "vue",
+    "vue-query",
+    "msw",
+    "mock",
+    "axios",
+    "vue-query",
+    "vue",
+    "swr"
   ]
 }
